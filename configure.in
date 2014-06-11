@@ -36,7 +36,7 @@ AC_HEADER_TIME
 AC_C_BIGENDIAN
 
 dnl XXX - Linux sux.
-CFLAGS="$CFLAGS -D_BSD_SOURCE"
+CFLAGS="$CFLAGS -pipe -W -Wall -Wpointer-arith -D_BSD_SOURCE"
 dnl Checks for library functions.
 AC_CHECK_FUNCS(gettimeofday)
 dnl XXX - Solaris sux.
@@ -250,4 +250,4 @@ if test "x"$LIBNET_VER != "x"-1 ; then
 	fi
 fi
 AC_SUBST(LIBNET_VER)
-AC_OUTPUT(Makefile src/Makefile samples/Makefile)
+AC_OUTPUT(Makefile src/Makefile samples/Makefile xids/Makefile)
